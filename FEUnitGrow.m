@@ -29,7 +29,7 @@ function [uname, growproj] = FEUnitGrow (uname, blevel, bases, growths, promo)
   while (cur_level < 20) # first stage of growth
 
     cur_level++; # level up
-    cur_stats(cur_level,:) = cur_stats(cur_level - 1) + growths; # increase stats
+    cur_stats(cur_level,:) = cur_stats(cur_level - 1, :) + growths; # increase stats
 
   endwhile
 
